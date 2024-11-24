@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Videos</title>
+    <script>
+        // JavaScript to refresh the page every 10 seconds
+        setTimeout(() => {
+            window.location.reload();
+        }, 60000); // 10 seconds
 
+        // Lazy load function to load video when visible
+        document.addEventListener("DOMContentLoaded", function () {
+            const videos = document.querySelectorAll('.fb-video');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        iframe.src = iframe.dataset.src; // Load the video iframe source
+                        observer.unobserve(entry.target); // Stop observing once loaded
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the video is visible
+
+            videos.forEach(video => {
+                observer.observe(video);
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .video {
+            max-width: 100px;
+            width: 100%;
+            aspect-ratio:1/1;
+            position: relative;
+        }
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Facebook Video Autoplay</h1>
+    <div class="video-container">
+        <!-- Embed the same video 10 times -->
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+        <div class="video">
+            <div class="loading-spinner">Loading...</div>
+            <iframe class="fb-video" 
+                data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsimaykoo%2Fvideos%2F1288514738824505&autoplay=1" 
+                width="500" height="280" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" frameborder="0" 
+                allowfullscreen="true">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" 
+        nonce="Fb2mKGY8"></script>
+</body>
+  </html>
+  
