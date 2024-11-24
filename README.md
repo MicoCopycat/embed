@@ -1,1 +1,1 @@
-micocopycat.github.io/embed
+https://www.micocopycat.github.io/embed
